@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 /* paleta de colores
     #1995AD
     #A1D6E2
     #F1F1F2
  */
+*{
+    font-family: "Nunito Sans", sans-serif
+}
 
 body{
     background: #F1F1F2;
@@ -10,7 +14,14 @@ body{
 }
 
 .menu1{
-    background: #A1D6E2;
+    background: #1b3039 ;
+    color: chartreuse;
+}
+
+.menu1 a.nav-item.nav-link {
+    font-size: 700;
+    color:  #ffffff;
+    text-decoration: none;
 }
 
 #parrafo{
@@ -53,6 +64,7 @@ body{
 .container01{
     width: 90%;
     margin: 0 auto;
+    
 }
 
 .grid {
@@ -64,17 +76,52 @@ body{
 
 .grid > div {
     height: 100px;
-    background: #A1D6E2
+    background: #F1F1F2
     
 }
 
 .texto1{
     margin-left: 15px;
     margin-top: 10px;
+    text-align: center;
 }
 .cuadro1{
     border-radius: 10px;
     min-height: 200px;
-    
-    
 }
+
+.form.d-flex{
+    color: blueviolet;
+}
+
+
+.nav-links{
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-links li{
+    display:  inline-block;
+    padding: 0 20px;
+}
+.nav-links li:hover{
+    transform:  scale(1.1);
+}
+.nav-links a{
+    font-size: 700;
+    color:  #ffffff;
+    text-decoration: none;
+}
+.nav-links li a:hover{
+    color: #ffbc0e;
+}
+
+.Logo img{
+    width: auto;
+    transition: all 0.3s;
+}
+
+
+
+    
+    
