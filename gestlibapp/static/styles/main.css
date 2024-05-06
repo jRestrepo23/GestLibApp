@@ -5,6 +5,8 @@
     #F1F1F2
  */
 *{
+    margin: 0;
+    padding: 0;
     font-family: "Nunito Sans", sans-serif
 }
 
@@ -15,13 +17,14 @@ body{
 
 .menu1{
     background: #1b3039 ;
-    color: chartreuse;
+    justify-content: space-between;
 }
 
 .menu1 a.nav-item.nav-link {
     font-size: 700;
     color:  #ffffff;
     text-decoration: none;
+
 }
 
 #parrafo{
@@ -33,6 +36,10 @@ body{
     font: small-caps 100%/200% serif;
     color: rgb(0, 0, 0);
     text-align: center;
+}
+
+.col-md-4{
+    color: black;
 }
 
 .img-libro{
@@ -64,21 +71,10 @@ body{
 .container01{
     width: 90%;
     margin: 0 auto;
-    
+    display: flex;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    color: rgb(0, 0, 0);
-}
 
-.grid > div {
-    height: 100px;
-    background: #F1F1F2
-    
-}
 
 .texto1{
     margin-left: 15px;
@@ -88,6 +84,7 @@ body{
 .cuadro1{
     border-radius: 10px;
     min-height: 200px;
+    color: black;
 }
 
 .form.d-flex{
@@ -121,7 +118,39 @@ body{
     transition: all 0.3s;
 }
 
+.navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b3039;
+    padding: 17;
+}
+
+.logo{
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
+
+.listas {
+    display: inline-block;
+    color: #fff;
+    padding: 6px;
+    font-weight: bold;
+    transition: .3s ease;
+}
 
 
-    
-    
+.listas a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 3px;
+    transition: .3s ease;
+}
+
+.listas:hover{
+    color: rgb(255, 230, 0);
+}
+
+.listas >a:hover{
+    color:  rgb(255, 230, 0);
+}

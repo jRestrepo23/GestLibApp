@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <title>{% block titulo  %} Gestlibapp {% endblock %} </title>
         <!-- Required meta tags -->
@@ -19,25 +19,31 @@
         />
     <link rel="stylesheet" href="{% static 'styles/main.css' %}">
     <link rel="icon" type="image/png" href="/static/icon.png">
+    <script src="https://kit.fontawesome.com/ff162028a7.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <div class="menu1">
-        <nav class="navbar navbar-expand ">
-            <div class="Logo">
+        <div class="navegacion">
+            <h1 class="logo">
                 <img id="logo"src="https://i.pinimg.com/736x/ce/da/08/ceda0890bf018c98f79496bbba915a2f.jpg" class="rounded">
-            </div>
-            <ul class="nav-links">
-                <div class="menu">
-                <div class="nav navbar-nav">
-                    <li><a class="nav-item nav-link" href="{% url 'inicio' %}">Inicio</a>
-                    <li><a class="nav-item nav-link" href="{% url 'libros' %}">Libros</a></li>
-                    <li><a class="nav-item nav-link" href="{% url 'nosotros' %}">Nosotros</a></li>
-                </div>  
-                </div>
-            </ul>
-        </nav>
+            </h1>
+    
+            <nav>
+                <ul>
+                    <li class="listas"><i class="fa-solid fa-house"></i><a href="{% url 'inicio' %}">Inicio</a></li>
+                    <li class="listas"><i class="fa-solid fa-book"></i><a href="{% url 'libros' %}">Libros</a></li>
+                    <li class="listas"><i class="fa-solid fa-handshake"></i><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                    <li class="listas"><i class="fa-solid fa-shop"></i><a href="#">Catálogo</a></li>
+                    
+                </ul>
+                
+            </nav>
+            <form class="d-flex">
+                <input class="form-control" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form> 
         </div>
+    </div>
         
         <div class="container"></div>
             <div class="row"></div>
@@ -46,7 +52,7 @@
                 <div>
             </div>
         <div>
-
+        </header>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -61,40 +67,36 @@
         ></script>
 
         <div class="container01">
-            <hr>
-
-            <div class="grid">
-
-                <div class="cuadro1">
-                    <div class="texto1">
-                        <h6><b>Información</b></h6>
-                        <p>En que GestLib nos dedicamos a facilitar el acceso y la gestión eficiente de recursos bibliográficos para comunidades diversas desde estudiantes ávidos de conocimiento hasta profesionales que buscan información especializada</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="cuadro1">
+                            <div class="texto1">
+                                <h6><b>Información</b></h6>
+                                <p>En que GestLib nos dedicamos a facilitar el acceso y la gestión eficiente de recursos bibliográficos para comunidades diversas desde estudiantes ávidos de conocimiento hasta profesionales que buscan información especializada</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="cuadro1">
-                    <div class="texto1">
-                        <h6><b>Servicio al cliente</b></h6>
-                        <p>Atención amable y respetuosa</p>
-                        <p>Respuesta rápida</p>
-                        <p>Resolución de problemas</p>
+                    <div class="col-md-4">
+                        <div class="cuadro1">
+                            <div class="texto1">
+                                <h6><b>Servicio al cliente</b></h6>
+                                <p>Atención amable y respetuosa</p>
+                                <p>Respuesta rápida</p>
+                                <p>Resolución de problemas</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="cuadro1">
-                    <div class="texto1">
-                        <h6><b>Contáctanos</b></h6>
-                        <p>jrestrepocano@gmail.com</p>
-                        <p>juandavid.moreno240@gmail.com <3</p>
-                        <p>sebasagudelom31@gmail.com</p>
+                    <div class="col-md-4">
+                        <div class="cuadro1">
+                            <div class="texto1">
+                                <h6><b>Contáctanos</b></h6>
+                                <p>jrestrepocano@gmail.com</p>
+                                <p>juandavid.moreno240@gmail.com <3</p>
+                                <p>sebasagudelom31@gmail.com</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-             </div>
-            
+                </div>   
         </div>
-        
-
-
     </body>
 </html>
