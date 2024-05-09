@@ -62,7 +62,7 @@ body{
 }
 
 #logo{
-    width: 60px;
+    width: 80px;
     margin-left: 10px;
 }
 
@@ -153,4 +153,12 @@ body{
 
 .listas >a:hover{
     color:  rgb(255, 230, 0);
+}
+
+.img_nosotros{
+    text-align: center;
+}
+
+#img_nosotros{
+    width: 200px;
 }
