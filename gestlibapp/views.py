@@ -17,3 +17,5 @@ def crear(request):
 def editar(request):
     return render(request, 'libros/editar.html')
 
+def catalogo(request):
+    return render(request, 'paginas/catalogo.html')
