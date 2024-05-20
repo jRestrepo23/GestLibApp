@@ -160,7 +160,7 @@ body{
 }
 
 #img_nosotros{
-    width: 200px;
+    width: 300px;
 }
 
 /* Seccion Galeria de Fotos*/
@@ -173,7 +173,7 @@ body{
 .swiper-slide{
     width: 400px;
     height: 600px;
-    background-color: #a19267;
+    background-color: #3d5965;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     padding: 40px;
     text-align: center;
@@ -542,4 +542,23 @@ body{
 .wrapper .github:hover .tooltip::before {
   background: #252323;
   color: #fff;
+}
+
+
+
+/*IMAGEN NOSOTROS*/
+
+.img_nosotros {
+  overflow: hidden; /* Para evitar que la imagen sobresalga del contenedor */
+}
+
+.img_nosotros img {
+  transition: opacity 0.5s, transform 0.5s; /* Define las propiedades que cambiarán y el tiempo de transición */
+  opacity: 0.5; /* Define la opacidad inicial de la imagen */
+  transform: scale(0.5); /* Inicialmente la imagen está encogida */
+}
+
+.img_nosotros:hover img {
+  opacity: 1; /* Aparece la imagen al pasar el ratón sobre el contenedor */
+  transform: scale(1); /* Agranda la imagen al pasar el ratón sobre el contenedor */
 }
