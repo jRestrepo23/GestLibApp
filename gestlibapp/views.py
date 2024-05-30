@@ -35,4 +35,7 @@ def eliminar(request, id):
     return redirect('libros')
 
 def catalogo(request):
-    return render(request, 'paginas/catalogo.html')
+    return render(request, 'catalogo/catalogo.html')
+
+def comprar(request):
+    return render(request, 'catalogo/comprar.html')

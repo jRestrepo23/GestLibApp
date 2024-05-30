@@ -1,12 +1,6 @@
 from django.db import models
 
 # Create your models here.
-class cliente(models.Model):
-    id = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=100, verbose_name='Nombre')
-    apellido = models.CharField(max_length=100, verbose_name='Apellido')
-    email = models.CharField(max_length=100, verbose_name='Email')
-
 class libro(models.Model):
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100, verbose_name='Nombre')
@@ -16,5 +10,16 @@ class libro(models.Model):
     def __str__(self):
         fila = "Nombre: " + self.nombre + " - " + "Descripcion: " + self.descripcion
         return fila
+
+class cliente(models.Model):
+    cedula = models.CharField(max_length=20, verbose_name='cedula', null=True)
+    libro = models.ForeignKey(libro, null=True, blank=True, on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=100, verbose_name='Nombre')
+    apellido = models.CharField(max_length=100, verbose_name='Apellido')
+    email = models.CharField(max_length=100, verbose_name='Email')
+
+
+
+    
 
 

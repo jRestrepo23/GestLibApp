@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block titulo  %} Comprar {% endblock %}
+
+{% block contenido  %} 
+
+<div class="card">
+    <div class="card-header">Orden de compra</div>
+    <div class="card-body">
+        <h4 class="card-title">Datos de Factura</h4>
+        {% include 'catalogo/form_comprar.html' %}
+
+    </div>
+    <div class="card-footer text-muted"></div>
+</div>
+
+
+{% endblock %}
