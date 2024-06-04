@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import libro
-from .forms import LibroForm
+from .models import libro,cliente
+from .forms import LibroForm,ClienteForm
 
 # Create your views here.
 def inicio(request):
@@ -38,4 +38,5 @@ def catalogo(request):
     return render(request, 'catalogo/catalogo.html')
 
 def comprar(request):
-    return render(request, 'catalogo/comprar.html')
+    forms = ClienteForm(request.POST or None)
+    return render(request, 'catalogo/comprar.html', {'formulario': forms})
