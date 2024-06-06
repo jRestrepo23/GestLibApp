@@ -39,4 +39,7 @@ def catalogo(request):
 
 def comprar(request):
     forms = ClienteForm(request.POST or None)
+    if request.method == 'POST' and forms.is_valid():
+        forms.save()
+        return redirect('catalogo')
     return render(request, 'catalogo/comprar.html', {'formulario': forms})
