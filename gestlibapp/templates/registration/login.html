@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+    
+{% load static %}
+
+{% block titulo  %} Inicio de sesion {% endblock %}
+
+{% block contenido  %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar secion</title>
+    <link rel="stylesheet" href="{% static 'styles/singnin.css' %}">
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="card-header">
+          <h1>Login</h1>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required="">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required="">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="login-button">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+    
+</body>
+</html>
+
+{% endblock %}

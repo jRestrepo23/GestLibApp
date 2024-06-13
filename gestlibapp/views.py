@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import libro,cliente
 from .forms import LibroForm,ClienteForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def inicio(request):
@@ -34,6 +35,7 @@ def eliminar(request, id):
     libros.delete()
     return redirect('libros')
 
+@login_required
 def catalogo(request):
     return render(request, 'catalogo/catalogo.html')
 
