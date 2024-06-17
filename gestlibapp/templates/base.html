@@ -72,6 +72,11 @@
                     <li class="listas"><i class="fa-solid fa-book"></i><a href="{% url 'libros' %}">Libros</a></li>
                     <li class="listas"><i class="fa-solid fa-handshake"></i><a href="{% url 'nosotros' %}">Nosotros</a></li>
                     <li class="listas"><i class="fa-solid fa-shop"></i><a href="{% url 'catalogo' %}">Catálogo</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li class="listas"><i class="fa-solid fa-user"></i><a href="{% url 'exit' %}">Salir</a></li>
+                    {% else %}  
+                      <li class="listas"><i class="fa-solid fa-user"></i><a href="{% url 'login' %}">Ingresar</a></li>
+                    {% endif %}
                     
                 </ul>
                 

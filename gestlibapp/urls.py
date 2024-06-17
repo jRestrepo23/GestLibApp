@@ -3,7 +3,6 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', views.inicio, name='inicio'),
     path('nosotros/', views.nosotros, name='nosotros'),
     path('libros/', views.libros, name='libros'),
@@ -13,5 +12,7 @@ urlpatterns = [
     path('eliminar/<int:id>', views.eliminar, name='eliminar'),
     path('libros/editar/<int:id>', views.editar, name='editar'),
     path('catalogo/comprar/', views.comprar, name='comprar'),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('logout/', views.exit, name='exit'),
+    path('register/', views.register, name='register')
 ]
