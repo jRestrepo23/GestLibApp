@@ -1,6 +1,6 @@
 
 .login-card {
-    background-color: #ff0000;
+    background-color: #ffffff;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 20px;
@@ -68,7 +68,7 @@
   }
   
   .login-button {
-    background-color: #fa4f00;
+    background-color: #0073ff;
     border: none;
     border-radius: 5px;
     color: #fff;
