@@ -13,6 +13,7 @@ def inicio(request):
 def nosotros(request):
     return render(request, 'paginas/nosotros.html')
 
+@login_required
 def libros(request):
     libros = libro.objects.all()
     return render(request, 'libros/index.html', {'libros': libros})
@@ -37,7 +38,6 @@ def eliminar(request, id):
     libros.delete()
     return redirect('libros')
 
-@login_required
 def catalogo(request):
     return render(request, 'catalogo/catalogo.html')
 
