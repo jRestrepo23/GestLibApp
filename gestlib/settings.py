@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'gestlib_bdd',
         'USER' : 'root',
-        'PASSWORD' :'',
+        'PASSWORD' :'123456ad',
         'HOST': 'localhost',
         'PORT': '3306'
     }
