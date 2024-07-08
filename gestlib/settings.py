@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!=$m(8)&a-k=6@6cm5s39ih@q^jsnlkkol6s#e2xnf@imwtyih'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -134,3 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # variables de redireccion de login y de logout
 LOGIN_REDIRECT_URL = 'inicio'
 LOGOUT_REDIRECT_URL = 'inicio'
+
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.staticfiles.storage.CompressedStaticFilesStorage"
+
+COMPRESS_ENABLED = True
