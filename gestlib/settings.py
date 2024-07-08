@@ -88,14 +88,13 @@ WSGI_APPLICATION = 'gestlib.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gestlib_bdd',
-        'USER' : 'root',
-        'PASSWORD' :'123456ad',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'NAME': os.getenv('DB_NAME', 'gestlib_bdd'),
+        'USER': os.getenv('DB_USER', 'root'),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '3306'),
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
