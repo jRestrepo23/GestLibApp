@@ -1,1 +1,1 @@
-web: gunicorn gestlib.wsgi
+web: python manage.py collectstatic && gunicorn (gestlib).wsgi
