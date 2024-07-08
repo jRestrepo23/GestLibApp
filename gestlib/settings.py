@@ -88,14 +88,13 @@ WSGI_APPLICATION = 'gestlib.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME', 'bv3jq7lzrwzo8uklxsoo'),
-        'USER': os.getenv('DB_USER', 'uvaqs2ezakrxllbp'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'uvaqs2ezakrxllbp'),
-        'HOST': os.getenv('DB_HOST', 'bv3jq7lzrwzo8uklxsoo-mysql.services.clever-cloud.com'),
-        'PORT': os.getenv('DB_PORT', '3306'),
+        'NAME': 'gestlib_bdd',
+        'USER' : 'root',
+        'PASSWORD' :'',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
