@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME', 'gestlib_bdd'),
         'USER': os.getenv('DB_USER', 'root'),
         'PASSWORD': os.getenv('DB_PASSWORD', '123456ad'),
-        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
+        'HOST': os.getenv('DB_HOST', 'bv3jq7lzrwzo8uklxsoo-mysql.services.clever-cloud.com'),
         'PORT': os.getenv('DB_PORT', '3306'),
     }
 }
